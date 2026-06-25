@@ -39,3 +39,18 @@ poetry run python scripts/csv_data_processor.py
 
 5. View data on s3 bucket
 ![alt text](image-1.png)
+
+## Resources
+https://pypi.org/project/python-dotenv/
+
+https://stackoverflow.com/questions/29596584/getting-a-list-of-xml-tags-in-file-using-xml-etree-elementtree
+
+https://www.geeksforgeeks.org/python/convert-xml-to-csv-in-python/
+
+https://www.tutorialspoint.com/article/python-program-to-read-and-printing-all-files-from-a-zip-file
+
+https://www.geeksforgeeks.org/python/unzipping-files-in-python/
+
+https://www.zyte.com/learn/a-practical-guide-to-xml-parsing-with-python/
+
+

@@ -30,19 +30,25 @@ download_file(LINK, ORIGINAL_XML_FILEPATH)
 links = {}
 # ET.parse() loads the XML file into an element tree.
 # getroot() retrieves the root element of the XML structure
-logger.info('Parsing xml.....')
-tree = ET.parse(ORIGINAL_XML_FILEPATH).getroot()
+def parse_xml():
+    logger.info('Parsing xml.....')
+    tree = ET.parse(ORIGINAL_XML_FILEPATH).getroot()
 
-try:
-    for element in tree.iter():
-        if (element.tag == 'str' and element.attrib.get('name') == 'download_link'):  # noqa: E501
-            download_link = element.text
+    try:
+        for element in tree.iter():
+            if (element.tag == 'str' and element.attrib.get('name') == 'download_link'):  # noqa: E501
+                download_link = element.text
 
-            filename = download_link.split('/')[-1].split('.')[0]
-            links[filename] = download_link
+                filename = download_link.split('/')[-1].split('.')[0]
 
-except Exception as e:
-    logger.error(e)
+                # extract second zipped file
+                if 'DLTINS_20210119_01of02' in filename:
+                    links[filename] = download_link
+
+    except Exception as e:
+        logger.error(e)
+
+parse_xml()
 
 
 # ------ download the zipped files

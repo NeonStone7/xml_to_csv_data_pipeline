@@ -1,12 +1,3 @@
-import pandas as pd
-
-pd.set_option('display.max.columns', None)
-
-file = 'datasets\output_data\DLTINS_20210118_01of01.csv'
-df = pd.read_csv(file)
-
-df['a_count'] = df['FullNm'].apply(lambda x: x.lower().count('a')).fillna(0)
-df['contains_a'] = df['a_count'].apply(lambda x: 'YES' if x>1 else 'NO')
-
-x = df[df['a_count']==0]
-print(x[['FullNm', 'a_count', 'contains_a']])
+version https://git-lfs.github.com/spec/v1
+oid sha256:e944d297059e750142aaf02bc45999c2f10013b35f23ce30aae4b7c4b5bf81d8
+size 769

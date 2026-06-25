@@ -28,10 +28,13 @@ download_file(LINK, ORIGINAL_XML_FILEPATH)
 
 # ---- parse the xml to retreive the download_link and filename ------
 links = {}
-# ET.parse() loads the XML file into an element tree.
-# getroot() retrieves the root element of the XML structure
+
+
 def parse_xml():
+    """Parse XML file."""
     logger.info('Parsing xml.....')
+    # ET.parse() loads the XML file into an element tree.
+    # getroot() retrieves the root element of the XML structure
     tree = ET.parse(ORIGINAL_XML_FILEPATH).getroot()
 
     try:
@@ -47,6 +50,7 @@ def parse_xml():
 
     except Exception as e:
         logger.error(e)
+
 
 parse_xml()
 

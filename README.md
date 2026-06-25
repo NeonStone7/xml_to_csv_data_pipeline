@@ -16,6 +16,7 @@ Set your python interpreter to the poetry venv path
 ```bash
 poetry run flake8 scripts
 poetry run pydocstyle scripts
+poetry run ruff check
 ```
 
 3. Generate AWS secrets and bucket
@@ -38,7 +39,7 @@ poetry run python scripts/csv_data_processor.py
 ```
 
 5. View data on s3 bucket
-![alt text](image-1.png)
+![alt text](image.png)
 
 ## Resources
 https://pypi.org/project/python-dotenv/

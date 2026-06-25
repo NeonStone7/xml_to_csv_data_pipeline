@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1593317d41e952bb6c80a64858573b6333a06569b285927ec95c15695fac6b44
-size 710
+[project]
+name = "xml-to-csv-data-processor"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "my_user",email = "oamenmodupe@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=3.0.3,<4.0.0)",
+    "lxml (>=6.1.1,<7.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "xmltodict (>=1.0.4,<2.0.0)",
+    "fsspec (>=2026.6.0,<2027.0.0)",
+    "s3fs (>=2026.6.0,<2027.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "mypy (>=2.1.0,<3.0.0)",
+    "pydocstyle (>=6.3.0,<7.0.0)",
+    "make (>=0.1.6.post2,<0.2.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
